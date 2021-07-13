@@ -1,0 +1,7 @@
+FileVersion = 1
+Dependencies = {corlib = "*", glfw-beef = "*", Ultralight = "*"}
+
+[Project]
+Name = "Ultralight-beef-samples"
+TargetType = "BeefGUIApplication"
+StartupObject = "UltralightBeefSamples.Program"

@@ -1,0 +1,6 @@
+[submodule "libs/Ultralight-beef"]
+	path = libs/Ultralight-beef
+	url = https://github.com/kumikumi/Ultralight-beef.git
+[submodule "libs/glfw-beef"]
+	path = libs/glfw-beef
+	url = https://github.com/MineGame159/glfw-beef.git

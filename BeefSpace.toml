@@ -1,0 +1,5 @@
+FileVersion = 1
+Projects = {Ultralight-beef-samples = {Path = "."}, glfw-beef = {Path = "libs/glfw-beef"}, Ultralight = {Path = "libs/Ultralight-beef"}}
+
+[Workspace]
+StartupProject = "Ultralight-beef-samples"

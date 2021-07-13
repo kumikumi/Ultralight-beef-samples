@@ -1,0 +1,135 @@
+using glfw_beef;
+using static ultralight.Ultralight;
+
+namespace UltralightBeefSamples.OpenGLSample
+{
+	static
+	{
+		public static ULKeyCode GLFWKeyCodeToUltralightKeyCode(GlfwInput.Key key)
+		{
+			switch (key) {
+			case .Space: return .GK_SPACE;
+			case .Apostrophe: return .GK_OEM_7;
+			case .Comma: return .GK_OEM_COMMA;
+			case .Minus: return .GK_OEM_MINUS;
+			case .Period: return .GK_OEM_PERIOD;
+			case .Slash: return .GK_OEM_2;
+			case .Num0: return .GK_0;
+			case .Num1: return .GK_1;
+			case .Num2: return .GK_2;
+			case .Num3: return .GK_3;
+			case .Num4: return .GK_4;
+			case .Num5: return .GK_5;
+			case .Num6: return .GK_6;
+			case .Num7: return .GK_7;
+			case .Num8: return .GK_8;
+			case .Num9: return .GK_9;
+			case .Smicolon: return .GK_OEM_1;
+			case .Equal: return .GK_OEM_PLUS;
+			case .A: return .GK_A;
+			case .B: return .GK_B;
+			case .C: return .GK_C;
+			case .D: return .GK_D;
+			case .E: return .GK_E;
+			case .F: return .GK_F;
+			case .G: return .GK_G;
+			case .H: return .GK_H;
+			case .I: return .GK_I;
+			case .J: return .GK_J;
+			case .K: return .GK_K;
+			case .L: return .GK_L;
+			case .M: return .GK_M;
+			case .N: return .GK_N;
+			case .O: return .GK_O;
+			case .P: return .GK_P;
+			case .Q: return .GK_Q;
+			case .R: return .GK_R;
+			case .S: return .GK_S;
+			case .T: return .GK_T;
+			case .U: return .GK_U;
+			case .V: return .GK_V;
+			case .W: return .GK_W;
+			case .X: return .GK_X;
+			case .Y: return .GK_Y;
+			case .Z: return .GK_Z;
+			case .LeftBracket: return .GK_OEM_4;
+			case .Backslash: return .GK_OEM_5;
+			case .RightBracket: return .GK_OEM_6;
+			case .GraveAccent: return .GK_OEM_3;
+			case .World1: return .GK_UNKNOWN;
+			case .World2: return .GK_UNKNOWN;
+			case .Escape: return .GK_ESCAPE;
+			case .Enter: return .GK_RETURN;
+			case .Tab: return .GK_TAB;
+			case .Backspace: return .GK_BACK;
+			case .Insert: return .GK_INSERT;
+			case .Delete: return .GK_DELETE;
+			case .Right: return .GK_RIGHT;
+			case .Left: return .GK_LEFT;
+			case .Down: return .GK_DOWN;
+			case .Up: return .GK_UP;
+			case .PageUp: return .GK_PRIOR;
+			case .PageDown: return .GK_NEXT;
+			case .Home: return .GK_HOME;
+			case .End: return .GK_END;
+			case .CapsLock: return .GK_CAPITAL;
+			case .ScrollLock: return .GK_SCROLL;
+			case .NumLock: return .GK_NUMLOCK;
+			case .PrintScreen: return .GK_SNAPSHOT;
+			case .Pause: return .GK_PAUSE;
+			case .F1: return .GK_F1;
+			case .F2: return .GK_F2;
+			case .F3: return .GK_F3;
+			case .F4: return .GK_F4;
+			case .F5: return .GK_F5;
+			case .F6: return .GK_F6;
+			case .F7: return .GK_F7;
+			case .F8: return .GK_F8;
+			case .F9: return .GK_F9;
+			case .F10: return .GK_F10;
+			case .F11: return .GK_F11;
+			case .F12: return .GK_F12;
+			case .F13: return .GK_F13;
+			case .F14: return .GK_F14;
+			case .F15: return .GK_F15;
+			case .F16: return .GK_F16;
+			case .F17: return .GK_F17;
+			case .F18: return .GK_F18;
+			case .F19: return .GK_F19;
+			case .F20: return .GK_F20;
+			case .F21: return .GK_F21;
+			case .F22: return .GK_F22;
+			case .F23: return .GK_F23;
+			case .F24: return .GK_F24;
+			case .F25: return .GK_UNKNOWN;
+			case .Kp0: return .GK_NUMPAD0;
+			case .Kp1: return .GK_NUMPAD1;
+			case .Kp2: return .GK_NUMPAD2;
+			case .Kp3: return .GK_NUMPAD3;
+			case .Kp4: return .GK_NUMPAD4;
+			case .Kp5: return .GK_NUMPAD5;
+			case .Kp6: return .GK_NUMPAD6;
+			case .Kp7: return .GK_NUMPAD7;
+			case .Kp8: return .GK_NUMPAD8;
+			case .Kp9: return .GK_NUMPAD9;
+			case .KpDecimal: return .GK_DECIMAL;
+			case .KpDivide: return .GK_DIVIDE;
+			case .KpMultiply: return .GK_MULTIPLY;
+			case .KpSubtract: return .GK_SUBTRACT;
+			case .KpAdd: return .GK_ADD;
+			case .KpEnter: return .GK_RETURN;
+			case .KpEqual: return .GK_OEM_PLUS;
+			case .LeftShift: return .GK_SHIFT;
+			case .LeftControl: return .GK_CONTROL;
+			case .LeftAlt: return .GK_MENU;
+			case .LeftSuper: return .GK_LWIN;
+			case .RightShift: return .GK_SHIFT;
+			case .RightControl: return .GK_CONTROL;
+			case .RightAlt: return .GK_MENU;
+			case .RightSuper: return .GK_RWIN;
+			case .Menu: return .GK_UNKNOWN;
+			default: return .GK_UNKNOWN;
+			}
+		}
+	}
+}
