@@ -1,9 +1,6 @@
 using System;
 using System.Diagnostics;
-
-//using OpenGL;
-//using glfw_beef;
-//using BeefUtils;
+using System.IO;
 
 namespace UltralightBeefSamples
 {

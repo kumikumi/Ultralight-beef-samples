@@ -6,8 +6,8 @@ using glfw_beef;
 
 using UltralightBeefSamples.OpenGLSurface;
 
-using static ultralight.AppCore;
-using static ultralight.Ultralight;
+using Ultralight.AppCore;
+using Ultralight.Ultralight;
 
 namespace UltralightBeefSamples.OpenGLSample
 {

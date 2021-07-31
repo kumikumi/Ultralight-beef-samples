@@ -4,7 +4,7 @@ using System.Diagnostics;
 using OpenGL;
 using static OpenGL.GL;
 
-using static ultralight.Ultralight;
+using Ultralight.Ultralight;
 
 namespace UltralightBeefSamples.OpenGLSurface
 {

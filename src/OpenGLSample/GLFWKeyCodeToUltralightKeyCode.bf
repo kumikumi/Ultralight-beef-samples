@@ -1,5 +1,5 @@
 using glfw_beef;
-using static ultralight.Ultralight;
+using Ultralight.Ultralight;
 
 namespace UltralightBeefSamples.OpenGLSample
 {
