@@ -6,8 +6,8 @@ using glfw_beef;
 
 using UltralightBeefSamples.OpenGLSurface;
 
-using Ultralight.AppCore;
-using Ultralight.Ultralight;
+using Ultralight;
+using Ultralight.CAPI;
 
 namespace UltralightBeefSamples.OpenGLSample
 {
@@ -106,7 +106,7 @@ namespace UltralightBeefSamples.OpenGLSample
 				</div>
 				<textarea style="margin-top: 10px; width: 200px; height: 100px;"></textarea>
 				""";
-			ULString helloWorld = ulCreateStringUTF8(htmlString, (uint)htmlString.Length);
+			ULString helloWorld = ulCreateStringUTF8(htmlString, (uint32)htmlString.Length);
 			ulViewLoadHTML(view, helloWorld);
 			ulViewFocus(view);
 			// END OF INIT ULTRALIGHT
@@ -225,7 +225,7 @@ namespace UltralightBeefSamples.OpenGLSample
 			let isAutoRepeat = false;
 			let isSystemKey = false;
 
-			let event = ulCreateKeyEvent(type, modifiers, (int)virtualKeyCode, nativeKeyCode, emptyString, emptyString, isKeypad, isAutoRepeat, isSystemKey);
+			let event = ulCreateKeyEvent(type, modifiers, (int32)virtualKeyCode, (int32)nativeKeyCode, emptyString, emptyString, isKeypad, isAutoRepeat, isSystemKey);
 
 			ulViewFireKeyEvent(view, event);
 			ulDestroyString(emptyString);
@@ -280,7 +280,7 @@ namespace UltralightBeefSamples.OpenGLSample
 				ULMouseButton.kMouseButton_Middle :
 				ULMouseButton.kMouseButton_None;
 
-			let evt = ulCreateMouseEvent(ULMouseEventType.kMouseEventType_MouseMoved, (int)xpos, (int)ypos, button);
+			let evt = ulCreateMouseEvent(ULMouseEventType.kMouseEventType_MouseMoved, (int32)xpos, (int32)ypos, button);
 			ulViewFireMouseEvent(view, evt);
 			ulDestroyMouseEvent(evt);
 		}
@@ -336,7 +336,7 @@ namespace UltralightBeefSamples.OpenGLSample
 		{
 			String buffer = scope String();
 			Glfw.GetClipboardString(window, buffer);
-			let temp = ulCreateStringUTF8(buffer, (uint)(buffer.Length));
+			let temp = ulCreateStringUTF8(buffer, (uint32)(buffer.Length));
 			ulStringAssignString(result, temp);
 			ulDestroyString(temp);
 		}
@@ -367,12 +367,12 @@ namespace UltralightBeefSamples.OpenGLSample
 #endif
 		}
 
-		public static int PixelsToDevice(int val)
+		public static int32 PixelsToDevice(int val)
 		{
 #if BF_PLATFORM_MACOS
 			  return val;
 #else
-			return (int)Math.Round(val / scale());
+			return (int32)Math.Round(val / scale());
 #endif
 		}
 	}

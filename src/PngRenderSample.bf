@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
-using Ultralight.AppCore;
-using Ultralight.Ultralight;
+using Ultralight.CAPI;
 
 /***
 * Ultralight Sample 1 - Render to PNG

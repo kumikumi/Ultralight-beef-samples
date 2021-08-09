@@ -4,7 +4,7 @@ using System.Diagnostics;
 using OpenGL;
 using static OpenGL.GL;
 
-using Ultralight.Ultralight;
+using Ultralight.CAPI;
 
 namespace UltralightBeefSamples.OpenGLSurface
 {
@@ -47,7 +47,7 @@ namespace UltralightBeefSamples.OpenGLSurface
 			return surface.GetRowBytes();
 		}
 
-		public static uint GetSize(void* user_data)
+		public static uint32 GetSize(void* user_data)
 		{
 			GLSurface surface = (GLSurface)System.Internal.UnsafeCastToObject(user_data);
 			return surface.GetSize();
@@ -113,7 +113,7 @@ namespace UltralightBeefSamples.OpenGLSurface
 			return this.row_bytes_;
 		}
 
-		public uint GetSize()
+		public uint32 GetSize()
 		{
 			return this.size_;
 		}
