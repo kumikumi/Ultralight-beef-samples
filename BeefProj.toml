@@ -1,5 +1,5 @@
 FileVersion = 1
-Dependencies = {corlib = "*", glfw-beef = "*", Ultralight = "*"}
+Dependencies = {corlib = "*", GLFW = "*", Ultralight = "*"}
 
 [Project]
 Name = "Ultralight-beef-samples"

@@ -1,4 +1,4 @@
-using glfw_beef;
+using GLFW;
 using Ultralight;
 
 namespace UltralightBeefSamples.OpenGLSample

@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 
 using OpenGL;
-using glfw_beef;
+using GLFW;
 
 using UltralightBeefSamples.OpenGLSurface;
 
