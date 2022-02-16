@@ -41,6 +41,7 @@ namespace UltralightBeefSamples.OpenGLSample
 			Glfw.SetCursorPosCallback(window, new => WindowGLFW_cursor_pos_callback);
 			Glfw.SetMouseButtonCallback(window, new => WindowGLFW_mouse_button_callback);
 			Glfw.SetScrollCallback(window, new => WindowGLFW_scroll_callback);
+			Glfw.SetWindowFocusCallback(window, new => WindowGLFW_focus_callback);
 			GL.Init( => Glfw.GetProcAddress);
 
 			// INIT ULTRALIGHT
@@ -325,6 +326,17 @@ namespace UltralightBeefSamples.OpenGLSample
 			let evt = ulCreateScrollEvent(ULScrollEventType.kScrollEventType_ScrollByPixel, deltaX, deltaY);
 			ulViewFireScrollEvent(view, evt);
 			ulDestroyScrollEvent(evt);
+		}
+
+		public static void WindowGLFW_focus_callback(GlfwWindow* window, bool focus)
+		{
+			if (focus)
+			{
+				ulViewFocus(view);
+			} else
+			{
+				ulViewUnfocus(view);
+			}
 		}
 
 		public static void Clipboard_Clear_Callback()
