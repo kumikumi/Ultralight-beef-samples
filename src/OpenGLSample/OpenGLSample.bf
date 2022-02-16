@@ -355,6 +355,10 @@ namespace UltralightBeefSamples.OpenGLSample
 		{
 			float xScale = 0.0f, yScale = 0.0f;
 			Glfw.GetMonitorContentScale(Glfw.GetPrimaryMonitor(), ref xScale, ref yScale);
+			if (xScale == 0)
+			{
+				xScale = 1;
+			}
 			return (double)xScale;
 		}
 
